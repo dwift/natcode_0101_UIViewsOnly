@@ -47,7 +47,16 @@ class DwiftView: UIView {
         layer.borderColor = UIColor.red.cgColor
         layer.shadowOpacity = 0.7
         layer.shadowRadius = 10.0
+        //drawBall()
         
+    }
+
+    override func draw(_ rect: CGRect) {
+        //setUp()
+        drawBall()
+    }
+    
+    func drawBall() {
         let ballSize = CGSize(width: 50.0, height: 50.0)
         //let ballStartX = frame.width/2
         //let ballPosition = CGPoint(x:ballStartX, y:0)
@@ -58,18 +67,12 @@ class DwiftView: UIView {
         let ball = BallView(frame: ballFrame)
         addSubview(ball)
         
-        //ball.frame.origin = bounds.origin;
+        //works in both draw and init
+        ball.center = CGPoint(x: bounds.midX, y: bounds.midY);
         
-        //works in draw, not in init. 
-        ball.center = convert(center, from: superview) //self.convert(self.center, to: ball)
+        //works in draw, not in init.
+        //ball.center = convert(center, from: superview)
         
-//        child.center = [parent convertPoint:parent.center fromView:parent.superview];
-//        subSubView.center = subView.convertPoint(subView.center, fromView: subSubView)
-        
-    }
-
-    override func draw(_ rect: CGRect) {
-        setUp()
     }
     
 

@@ -34,7 +34,7 @@ class BallView: UIView {
         func setUp() {
             let circleFrame = bounds
             let circle = UIView(frame: circleFrame)
-            circle.center = center
+            circle.center = convert(center, from: superview)
             circle.layer.cornerRadius = 25.0
             
             let startingColor = UIColor(red: (253.0/255.0), green: (159.0/255.0), blue: (47.0/255.0), alpha: 1.0)

@@ -12,23 +12,26 @@ import UIKit
 
 @IBDesignable
 class DwiftView: UIView {
+
+    convenience init() {
+        self.init(frame: CGRect.zero)
+    }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUp()
+    }
     
-//    override public class var layerClass: Swift.AnyClass {
-//        return CAGradientLayer.self
-//    }
-//    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        
-//        guard let gradientLayer = self.layer as? CAGradientLayer else { return }
-//        gradientLayer.colors = [
-//            UIColor.blue.cgColor,
-//            UIColor.cyan.cgColor
-//        ]
- //   }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setUp()
+    }
     
-    func setupLayer() {
+    override func setNeedsLayout() {
+        setUp()
+    }
+    
+    func setUp() {
         
         //the backgroundcolor property gets set during viewWillLoad/viewDidLoad?
         //apparently can't be updated after. If call setuplayer in parent
@@ -45,42 +48,30 @@ class DwiftView: UIView {
         layer.shadowOpacity = 0.7
         layer.shadowRadius = 10.0
         
+        let ballSize = CGSize(width: 50.0, height: 50.0)
+        //let ballStartX = frame.width/2
+        //let ballPosition = CGPoint(x:ballStartX, y:0)
+        let ballPosition = bounds.origin
         
-        let circleSize = CGSize(width: 50.0, height: 50.0)
-        let circlePosition = CGPoint(x:bounds.midX, y:bounds.midY)
-        let circleFrame = CGRect(origin: center, size: circleSize)
-        let circle = UIView(frame: circleFrame)
-        circle.center = circlePosition
-        circle.layer.cornerRadius = 25.0
+        let ballFrame = CGRect(origin: ballPosition, size: ballSize)
         
-        let startingColor = UIColor(red: (253.0/255.0), green: (159.0/255.0), blue: (47.0/255.0), alpha: 1.0)
-        circle.backgroundColor = startingColor
+        let ball = BallView(frame: ballFrame)
+        addSubview(ball)
         
-        addSubview(circle);
+        //ball.frame.origin = bounds.origin;
+        
+        //works in draw, not in init. 
+        ball.center = convert(center, from: superview) //self.convert(self.center, to: ball)
+        
+//        child.center = [parent convertPoint:parent.center fromView:parent.superview];
+//        subSubView.center = subView.convertPoint(subView.center, fromView: subSubView)
         
     }
 
     override func draw(_ rect: CGRect) {
-        setupLayer()
-        //drawCircle()
+        setUp()
     }
     
-//    func drawCircle() {
-//        let myCircle = bezCircle(at: center, ofRadius: 50)
-//        UIColor.black.setFill()
-//        myCircle.fill()
-//        print("Where am I?")
-//        print(myCircle.bounds)
-//        
-//    }
-    
-    
-//    
-//    func bezCircle(at location:CGPoint, ofRadius radius:CGFloat) -> UIBezierPath {
-//        let path =  UIBezierPath(arcCenter: location, radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-//        path.close()
-//        return path
-//    }
 
     
 

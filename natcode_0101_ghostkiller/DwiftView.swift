@@ -14,14 +14,14 @@ import UIKit
 class DwiftView: UIView {
     
     @IBInspectable
-    internal var colorForBackground: UIColor = UIColor(colorLiteralRed: 0.97, green: 0.97, blue: 0.97, alpha: 1) {
+    internal var colorForBackground: UIColor = UIColor(colorLiteralRed: 0.90, green: 0.90, blue: 0.90, alpha: 1) {
         didSet {
             self.backgroundColor = self.colorForBackground
         }
     }
     
     @IBInspectable
-    internal var colorForBorder: UIColor = UIColor(colorLiteralRed: 0.90, green: 0.90, blue: 0.90, alpha: 1) {
+    internal var colorForBorder: UIColor = UIColor(colorLiteralRed: 0.80, green: 0.80, blue: 0.80, alpha: 1) {
         didSet {
             self.layer.borderColor = self.colorForBorder.cgColor
         }}

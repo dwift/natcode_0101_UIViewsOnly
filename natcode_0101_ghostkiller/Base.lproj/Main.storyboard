@@ -28,6 +28,14 @@
                                     <constraint firstAttribute="width" constant="300" id="Rip-vn-s7H"/>
                                     <constraint firstAttribute="height" constant="300" id="sm3-Xi-sfs"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorForBackground">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorForBorder">
+                                        <color key="value" red="0.21306155739999999" green="0.37172603119999997" blue="0.54665464740000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

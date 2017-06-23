@@ -12,7 +12,27 @@ import UIKit
 
 @IBDesignable
 class DwiftView: UIView {
-
+    
+    @IBInspectable
+    internal var colorForBackground: UIColor = UIColor(colorLiteralRed: 0.97, green: 0.97, blue: 0.97, alpha: 1) {
+        didSet {
+            self.backgroundColor = self.colorForBackground
+        }
+    }
+    
+    @IBInspectable
+    internal var colorForBorder: UIColor = UIColor(colorLiteralRed: 0.90, green: 0.90, blue: 0.90, alpha: 1) {
+        didSet {
+            self.layer.borderColor = self.colorForBorder.cgColor
+        }}
+    
+    @IBInspectable
+    internal var sizeForBorder: CGFloat = 5 {
+        didSet {
+            self.layer.borderWidth = self.sizeForBorder
+        }
+    }
+    
     convenience init() {
         self.init(frame: CGRect.zero)
     }
@@ -32,50 +52,34 @@ class DwiftView: UIView {
     }
     
     func setUp() {
-        
-        //the backgroundcolor property gets set during viewWillLoad/viewDidLoad?
-        //apparently can't be updated after. If call setuplayer in parent
-        //view did load, can use background color but won't see it in
-        //interfface builder.
-        let easyChangeBackground = CAGradientLayer()
-        easyChangeBackground.frame = bounds
-        easyChangeBackground.colors = [UIColor.blue.cgColor, UIColor.black.cgColor]
-        layer.insertSublayer(easyChangeBackground, at: 0)
-        
-        
-        layer.borderWidth = 10.0
-        layer.borderColor = UIColor.red.cgColor
-        layer.shadowOpacity = 0.7
+        self.backgroundColor = colorForBackground
+        layer.borderWidth = sizeForBorder
+        layer.borderColor = colorForBorder.cgColor
+        layer.shadowOpacity = 0.3
         layer.shadowRadius = 10.0
-        //drawBall()
+        initBall()
+        updateBall(moveTo: convert(center, from: superview))
         
     }
 
     override func draw(_ rect: CGRect) {
-        //setUp()
-        drawBall()
+        updateBall(moveTo: convert(center, from: superview))
     }
     
-    func drawBall() {
+    func initBall(){
         let ballSize = CGSize(width: 50.0, height: 50.0)
-        //let ballStartX = frame.width/2
-        //let ballPosition = CGPoint(x:ballStartX, y:0)
         let ballPosition = bounds.origin
-        
         let ballFrame = CGRect(origin: ballPosition, size: ballSize)
-        
         let ball = BallView(frame: ballFrame)
         addSubview(ball)
+    
+    }
+    
+    func updateBall(moveTo newLocation:CGPoint) {
         
-        //Does not context center correctly. 
-        //see https://stackoverflow.com/questions/11251988/how-to-center-a-subview-of-uiview
-        //ball.center = center
-        
-        //works in both draw and init
-        ball.center = CGPoint(x: bounds.midX, y: bounds.midY);
-        
-        //works in draw, not in init.
-        //ball.center = convert(center, from: superview)
+        let currentBallViews = self.subviews.filter{$0 is BallView}
+        let ball = currentBallViews[0]
+        ball.center = newLocation
         
     }
     

@@ -11,7 +11,12 @@ import UIKit
 @IBDesignable
 class BallView: UIView {
 
-  
+    @IBInspectable
+    internal var ballColor: UIColor = UIColor(colorLiteralRed: 0.80, green: 0.80, blue: 0.80, alpha: 1) {
+        didSet {
+            self.backgroundColor = self.ballColor
+        }
+    }
     
         convenience init() {
             self.init(frame: CGRect.zero)
@@ -35,10 +40,9 @@ class BallView: UIView {
             let circleFrame = bounds
             let circle = UIView(frame: circleFrame)
             circle.center = center //WARNING, May stop working. If weird placement issues try "convert(center, from: superview)"
-            circle.layer.cornerRadius = 25.0
+            circle.layer.cornerRadius = bounds.width/2
             
-            let startingColor = UIColor(red: (253.0/255.0), green: (159.0/255.0), blue: (47.0/255.0), alpha: 1.0)
-            circle.backgroundColor = startingColor
+            circle.backgroundColor = ballColor
             
             addSubview(circle);
             

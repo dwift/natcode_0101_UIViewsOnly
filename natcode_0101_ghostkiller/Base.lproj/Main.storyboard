@@ -36,6 +36,9 @@
                             <constraint firstItem="yUi-9c-U7S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bGD-yy-7Ap"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dwiftView" destination="yUi-9c-U7S" id="Xss-3h-qIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

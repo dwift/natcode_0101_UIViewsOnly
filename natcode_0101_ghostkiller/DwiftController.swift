@@ -10,6 +10,7 @@ import UIKit
 
 class DwiftController: UIViewController {
     
+    @IBOutlet weak var dwiftView: DwiftView!
     
 
     override func viewDidLoad() {

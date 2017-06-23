@@ -1,14 +1,16 @@
 //
-//  ViewController.swift
+//  DwiftController.swift
 //  natcode_0101_ghostkiller
 //
 //  Created by Carlyn Maw on 6/23/17.
-//  Copyright © 2017 carlynorama. All rights reserved.
+//  Copyright © 2017 carlynorama. No rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class DwiftController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

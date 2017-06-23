@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D288D7251EFD8C0E00A12A3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288D7241EFD8C0E00A12A3B /* AppDelegate.swift */; };
-		D288D7271EFD8C0E00A12A3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288D7261EFD8C0E00A12A3B /* ViewController.swift */; };
+		D288D7271EFD8C0E00A12A3B /* DwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288D7261EFD8C0E00A12A3B /* DwiftController.swift */; };
 		D288D72A1EFD8C0E00A12A3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D288D7281EFD8C0E00A12A3B /* Main.storyboard */; };
 		D288D72C1EFD8C0E00A12A3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D288D72B1EFD8C0E00A12A3B /* Assets.xcassets */; };
 		D288D72F1EFD8C0E00A12A3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D288D72D1EFD8C0E00A12A3B /* LaunchScreen.storyboard */; };
+		D288D7371EFD8C8700A12A3B /* DwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288D7361EFD8C8700A12A3B /* DwiftView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D288D7211EFD8C0E00A12A3B /* natcode_0101_ghostkiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = natcode_0101_ghostkiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D288D7241EFD8C0E00A12A3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D288D7261EFD8C0E00A12A3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D288D7261EFD8C0E00A12A3B /* DwiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DwiftController.swift; sourceTree = "<group>"; };
 		D288D7291EFD8C0E00A12A3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D288D72B1EFD8C0E00A12A3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D288D72E1EFD8C0E00A12A3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D288D7301EFD8C0E00A12A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D288D7361EFD8C8700A12A3B /* DwiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DwiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				D288D7241EFD8C0E00A12A3B /* AppDelegate.swift */,
-				D288D7261EFD8C0E00A12A3B /* ViewController.swift */,
+				D288D7261EFD8C0E00A12A3B /* DwiftController.swift */,
+				D288D7361EFD8C8700A12A3B /* DwiftView.swift */,
 				D288D7281EFD8C0E00A12A3B /* Main.storyboard */,
 				D288D72B1EFD8C0E00A12A3B /* Assets.xcassets */,
 				D288D72D1EFD8C0E00A12A3B /* LaunchScreen.storyboard */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D288D7271EFD8C0E00A12A3B /* ViewController.swift in Sources */,
+				D288D7271EFD8C0E00A12A3B /* DwiftController.swift in Sources */,
+				D288D7371EFD8C8700A12A3B /* DwiftView.swift in Sources */,
 				D288D7251EFD8C0E00A12A3B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

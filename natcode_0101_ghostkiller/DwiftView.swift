@@ -3,7 +3,7 @@
 //  natcode_0101_ghostkiller
 //
 //  Created by Carlyn Maw on 6/23/17.
-//  Copyright © 2017 carlynorama. All rights reserved.
+//  Copyright © 2017 carlynorama. No rights reserved
 //
 
 import UIKit
@@ -66,6 +66,10 @@ class DwiftView: UIView {
         
         let ball = BallView(frame: ballFrame)
         addSubview(ball)
+        
+        //Does not context center correctly. 
+        //see https://stackoverflow.com/questions/11251988/how-to-center-a-subview-of-uiview
+        //ball.center = center
         
         //works in both draw and init
         ball.center = CGPoint(x: bounds.midX, y: bounds.midY);

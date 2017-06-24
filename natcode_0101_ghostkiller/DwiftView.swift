@@ -58,12 +58,11 @@ class DwiftView: UIView {
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 10.0
         initBall()
-        updateBall(moveTo: convert(center, from: superview))
         
     }
 
     override func draw(_ rect: CGRect) {
-        updateBall(moveTo: convert(center, from: superview))
+        //updateBall(moveTo: convert(center, from: superview))
     }
     
     func initBall(){

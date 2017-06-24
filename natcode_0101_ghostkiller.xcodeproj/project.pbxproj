@@ -312,6 +312,7 @@
 				D288D7351EFD8C0E00A12A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

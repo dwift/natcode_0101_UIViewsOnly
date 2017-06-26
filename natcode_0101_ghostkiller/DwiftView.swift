@@ -66,7 +66,7 @@ class DwiftView: UIView {
     }
     
     func initBall(){
-        let ballSize = CGSize(width: 50.0, height: 50.0)
+        let ballSize = CGSize(width: 30.0, height: 30.0)
         let ballPosition = bounds.origin
         let ballFrame = CGRect(origin: ballPosition, size: ballSize)
         let ball = BallView(frame: ballFrame)

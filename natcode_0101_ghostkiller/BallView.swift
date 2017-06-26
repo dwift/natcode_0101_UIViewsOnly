@@ -31,7 +31,7 @@ class BallView: UIView {
             super.init(coder: aDecoder)
             setUp()
         }
-        
+    
 //        override func setNeedsLayout() {
 //            setUp()
 //        }
@@ -43,6 +43,8 @@ class BallView: UIView {
             circle.layer.cornerRadius = bounds.width/2
             circle.backgroundColor = ballColor
             addSubview(circle);
+            
         }
-        
+
+    
 }

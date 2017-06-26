@@ -22,7 +22,7 @@ class DwiftController: UIViewController, UICollisionBehaviorDelegate {
     
     private lazy var physics: UIDynamicItemBehavior = {
         let behavior = UIDynamicItemBehavior()
-        behavior.elasticity = 1
+        behavior.elasticity = 0.95
         behavior.allowsRotation = true
         behavior.friction = 0
         behavior.resistance = 0
